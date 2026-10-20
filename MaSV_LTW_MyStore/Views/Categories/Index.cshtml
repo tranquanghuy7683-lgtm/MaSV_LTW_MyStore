@@ -1,0 +1,2 @@
+@model IEnumerable<MaSV_LTW_MyStore.Models.Category>
+<h2>Danh mục sản phẩm</h2><div class="list-group">@foreach(var c in Model){<a class="list-group-item list-group-item-action d-flex justify-content-between" href="@Url.Action("Index","Products",new{categoryId=c.CategoryID})">@c.CategoryName <span class="badge bg-primary">Xem sản phẩm</span></a>}</div>

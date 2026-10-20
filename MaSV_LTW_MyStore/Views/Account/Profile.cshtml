@@ -1,0 +1,2 @@
+@model MaSV_LTW_MyStore.Models.Customer
+<h2>Thông tin tài khoản</h2>@if(Model==null){<p>Không tìm thấy thông tin.</p>}else{<dl class="row"><dt class="col-sm-3">Họ tên</dt><dd class="col-sm-9">@Model.CustomerName</dd><dt class="col-sm-3">Điện thoại</dt><dd class="col-sm-9">@Model.CustomerPhone</dd><dt class="col-sm-3">Email</dt><dd class="col-sm-9">@Model.CustomerEmail</dd><dt class="col-sm-3">Địa chỉ</dt><dd class="col-sm-9">@Model.CustomerAddress</dd></dl>}

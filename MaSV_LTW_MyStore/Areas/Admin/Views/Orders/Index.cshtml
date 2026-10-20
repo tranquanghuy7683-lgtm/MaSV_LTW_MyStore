@@ -1,0 +1,2 @@
+@model IEnumerable<MaSV_LTW_MyStore.Models.StoreOrder>
+<h2>Quản lý đơn hàng</h2><table class="table table-bordered bg-white"><thead><tr><th>Mã đơn</th><th>Khách hàng</th><th>Ngày đặt</th><th>Tổng tiền</th><th>Trạng thái</th><th>Địa chỉ giao</th></tr></thead><tbody>@foreach(var o in Model){<tr><td>#@o.OrderID</td><td>@o.Customer.CustomerName</td><td>@o.OrderDate.ToString("dd/MM/yyyy")</td><td>@o.TotalAmount.ToString("N0") đ</td><td>@o.PaymentStatus</td><td>@o.AddressDelivery</td></tr>}</tbody></table>

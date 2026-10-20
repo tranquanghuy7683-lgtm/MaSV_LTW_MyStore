@@ -1,0 +1,2 @@
+@model MaSV_LTW_MyStore.Models.Category
+@{var edit=Model.CategoryID>0;ViewBag.Title=edit?"Sửa danh mục":"Thêm danh mục";}<h2>@ViewBag.Title</h2>@using(Html.BeginForm(edit?"Edit":"Create")){@Html.AntiForgeryToken()@Html.HiddenFor(m=>m.CategoryID)<div class="mb-3"><label class="form-label">Tên danh mục</label>@Html.TextBoxFor(m=>m.CategoryName,new{@class="form-control",required="required"})</div><button class="btn btn-primary">Lưu</button> <a class="btn btn-secondary" href="@Url.Action("Index")">Quay lại</a>}
